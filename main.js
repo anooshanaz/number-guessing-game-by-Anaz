@@ -1,11 +1,12 @@
 import inquirer from "inquirer";
-const randonNumber = 9;
+
+ const randomNumber = Math.floor(Math.random() *6 + 1)
 const answer = await inquirer.prompt([{
         name: "UserguessNumber",
         type: "number",
         message: "please guess a number"
     }]);
-if (answer.UserguessNumber === randonNumber) {
+if (answer.UserguessNumber === randomNumber) {
     console.log("congratulation you guessed right number");
 }
 else {
